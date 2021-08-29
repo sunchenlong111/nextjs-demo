@@ -1,7 +1,14 @@
 import '../styles/globals.css'
+import Head from 'next/head'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return <>
+    <Head>
+      <title>我的博客 Allen</title>
+    </Head>
+    <Component {...pageProps} />
+
+  </>
 }
 
-export default MyApp
+
