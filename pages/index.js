@@ -1,7 +1,6 @@
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import xx from 'assets/images/1.png'
-console.log(xx)
 
 export default function Home() {
   return (
