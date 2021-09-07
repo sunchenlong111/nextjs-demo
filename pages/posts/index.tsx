@@ -23,7 +23,7 @@ const PostIndex: NextPage<Props> = (props) => {
 export default PostIndex
 
 // 服务端渲染 获取props固定写法
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = await getPosts()
   return {
     props: {
