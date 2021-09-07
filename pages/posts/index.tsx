@@ -1,18 +1,33 @@
-import { usePosts } from 'hooks/usePosts'
-import { NextPage } from 'next'
+import getPosts from 'lib/posts'
+// GetStaticProps 服务端渲染必须要引入
+import { GetStaticProps, NextPage } from 'next'
 
-const PostIndex: NextPage = () => {
-  const { isLoading, isEmpty, posts } = usePosts()
+type Props = {
+  posts: Post[]
+}
+
+const PostIndex: NextPage<Props> = (props) => {
+  const { posts } = props
   return (
     <div>
       <h1>文章列表</h1>
-
-      {isLoading ? <div>加载中</div> :
-        isEmpty ? <div>没有文章</div> :
-          posts.map(post => <div key={post.id}>{post.id}</div>)
+      {
+        posts.map(p => <div key={p.id}>
+          {p.id}
+        </div>)
       }
     </div>
   )
 }
 
 export default PostIndex
+
+// 服务端渲染 获取props固定写法
+export const getStaticProps = async () => {
+  const posts = await getPosts()
+  return {
+    props: {
+      posts: JSON.parse(JSON.stringify(posts))
+    }
+  }
+}
