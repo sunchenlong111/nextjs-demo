@@ -1,6 +1,7 @@
-import getPosts from 'lib/posts'
+import { getPosts } from 'lib/posts'
 // GetStaticProps 服务端渲染必须要引入
 import { GetStaticProps, NextPage } from 'next'
+import Link from 'next/link'
 
 type Props = {
   posts: Post[]
@@ -13,7 +14,11 @@ const PostIndex: NextPage<Props> = (props) => {
       <h1>文章列表</h1>
       {
         posts.map(p => <div key={p.id}>
-          {p.id}
+          <Link href="/posts/[id]" as={`/posts/${p.id}`}>
+            <a>
+              {p.id}
+            </a>
+          </Link>
         </div>)
       }
     </div>
