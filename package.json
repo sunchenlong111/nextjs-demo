@@ -14,14 +14,17 @@
     "gray-matter": "^4.0.3",
     "next": "9.4.1",
     "next-images": "1.4.0",
+    "pg": "^8.7.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.37",
     "typescript": "3.9.2",
     "ua-parser-js": "^0.7.28"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
-    "@types/node": "^16.7.5",
+    "@types/node": "^16.9.1",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "eslint": "7.32.0",
