@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/cli": "^7.15.4",
     "@types/ua-parser-js": "^0.7.36",
     "axios": "^0.21.4",
     "gray-matter": "^4.0.3",
@@ -23,6 +24,7 @@
     "ua-parser-js": "^0.7.28"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.15.4",
     "@types/axios": "^0.14.0",
     "@types/node": "^16.9.1",
     "@types/react": "^17.0.19",
