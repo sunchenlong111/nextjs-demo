@@ -5,5 +5,5 @@ createConnection().then(async connection => {
 
   console.log(connection)
   connection.close()
-  console.log('test git1')
+  console.log('test git2')
 }).catch(error => console.log(error));
